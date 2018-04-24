@@ -1,0 +1,108 @@
+{ "contents": [
+  {
+    "category": "Furniture",
+    "region": "West",
+    "monthlySales":
+      [{
+        "month": 20130101,
+        "sales": 35
+      },
+      {
+        "month": 20130201,
+        "sales": 41
+      },
+      {
+        "month": 20130301,
+        "sales": 55
+      },
+      {
+        "month": 20130401,
+        "sales": 58
+      },
+      {
+        "month": 20130501,
+        "sales": 66
+      },
+      {
+        "month": 20130601,
+        "sales": 74
+      },
+      {
+        "month": 20130701,
+        "sales": 78
+      },
+      {
+        "month": 20130801,
+        "sales": 38
+      },
+      {
+        "month": 20130901,
+        "sales": 30
+      },
+      {
+        "month": 20131001,
+        "sales": 26
+      },
+      {
+        "month": 20131101,
+        "sales": 38
+      },
+      {
+        "month": 20131201,
+        "sales": 29
+      }]
+  },
+  {
+    "category": "Technology",
+    "region": "West",
+    "monthlySales":
+      [{
+        "month": 20130101,
+        "sales": 58
+      },
+      {
+        "month": 20130201,
+        "sales": 36
+      },
+      {
+        "month": 20130301,
+        "sales": 41
+      },
+      {
+        "month": 20130401,
+        "sales": 62
+      },
+      {
+        "month": 20130501,
+        "sales": 55
+      },
+      {
+        "month": 20130601,
+        "sales": 76
+      },
+      {
+        "month": 20130701,
+        "sales": 43
+      },
+      {
+        "month": 20130801,
+        "sales": 31
+      },
+      {
+        "month": 20130901,
+        "sales": 24
+      },
+      {
+        "month": 20131001,
+        "sales": 35
+      },
+      {
+        "month": 20131101,
+        "sales": 57
+      },
+      {
+        "month": 20131201,
+        "sales": 47
+      }]
+  }
+]}

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faceschart>
+	<chartdata>
+		<background>white</background>
+		<title><![CDATA[Product Profit Position]]></title>
+		<xlabel><![CDATA[&#37;]]></xlabel>
+		<ylabel><![CDATA[&#163;]]></ylabel>
+		<xfrom>0</xfrom>
+		<xto>3000</xto>
+		<yfrom>2000000</yfrom>
+		<yto>11000000</yto>
+		<xdiv>6</xdiv>
+		<ydiv>9</ydiv>
+		<root>www.v2c.co.uk</root>
+		<action>page.asp</action>	
+	</chartdata>
+	<keys>
+		<key>
+			<id>colour</id>
+			<title>critical success factors</title>
+			<items>
+				<item>
+					<label>low price</label>
+					<shape>square</shape>
+					<colour>red</colour>
+				</item>
+				<item>
+					<label>lead time</label>
+					<shape>square</shape>
+					<colour>purple</colour>
+				</item>
+				<item>
+					<label>brand</label>
+					<shape>square</shape>
+					<colour>green</colour>
+				</item>
+				<item>
+					<label>product quality</label>
+					<shape>square</shape>
+					<colour>yellow</colour>
+				</item>
+				<item>
+					<label>service quality</label>
+					<shape>square</shape>
+					<colour>orange</colour>
+				</item>
+				<item>
+					<label>delivery reliablility</label>
+					<shape>square</shape>
+					<colour>blue</colour>
+				</item>
+			</items>
+		</key>
+		<key>
+			<id>shape</id>
+			<title>key title</title>
+			<items>
+				<item>
+					<label>label 1</label>
+					<shape>square</shape>
+					<colour>grey</colour>
+				</item>
+				<item>
+					<label>label 2</label>
+					<shape>circle</shape>
+					<colour>grey</colour>
+				</item>
+				<item>
+					<label>label 3</label>
+					<shape>lozenge</shape>
+					<colour>grey</colour>
+				</item>
+				<item>
+					<label>label 4</label>
+					<shape>triangle</shape>
+					<colour>grey</colour>
+				</item>
+			</items>
+		</key>
+		<key>
+			<id>mouths</id>
+			<title>Sales Outlook</title>
+			<items>
+				<item>
+					<label>Strong Decline</label>
+					<shape>mouth_1</shape>
+				</item>
+				<item>
+					<label>Decline</label>
+					<shape>mouth_2</shape>
+				</item>
+				<item>
+					<label>Stable</label>
+					<shape>mouth_3</shape>
+				</item>
+				<item>
+					<label>Growth</label>
+					<shape>mouth_4</shape>
+				</item>
+				<item>
+					<label>Strong_Growth</label>
+					<shape>mouth_5</shape>
+				</item>
+			</items>
+		</key>
+
+		<key>
+			<id>eyes</id>
+			<title>Market Awareness</title>
+			<items>
+				<item>
+					<label>Low</label>
+					<shape>eyes_1</shape>
+				</item>
+				<item>
+					<label>Low</label>
+					<shape>eyes_2</shape>
+				</item>
+
+				<item>
+					<label>Low</label>
+					<shape>eyes_3</shape>
+				</item>
+				<item>
+					<label>Medium</label>
+					<shape>eyes_4</shape>
+				</item>
+				<item>
+					<label>High</label>
+					<shape>eyes_5</shape>
+				</item>
+			</items>
+		</key>
+
+	</keys>
+	<faces>
+		<face>
+			<title><![CDATA[Televisions]]></title>
+			<eyes>5</eyes>
+			<mouth>5</mouth>
+			<xpos>815</xpos>
+			<ypos>2650000</ypos>
+			<xfuture>1735</xfuture>
+			<yfuture>7450000</yfuture>
+			<colour>green</colour>
+			<shape>square</shape>
+		</face>
+
+		<face>
+			<title><![CDATA[Video Players]]></title>
+			<eyes>2</eyes>
+			<mouth>3</mouth>
+			<xpos>2700</xpos>
+			<ypos>8000000</ypos>
+			<xfuture>730</xfuture>
+			<yfuture>5100000</yfuture>
+			<colour>red</colour>
+			<shape>circle</shape>
+		</face>
+		<face>
+			<title><![CDATA[DVD Players]]></title>
+			<eyes>3</eyes>
+			<mouth>1</mouth>
+			<xpos>1340</xpos>
+			<ypos>7200000</ypos>
+			<xfuture>2295</xfuture>
+			<yfuture>4050000</yfuture>
+			<colour>blue</colour>
+			<shape>triangle</shape>
+		</face>	
+		<face>
+			<title><![CDATA[MP3 Players]]></title>
+			<eyes>1</eyes>
+			<mouth>2</mouth>
+			<xpos>150</xpos>
+			<ypos>4200000</ypos>
+			<xfuture>1470</xfuture>
+			<yfuture>3450000</yfuture>
+			<colour>pink</colour>
+			<shape>square</shape>
+
+		</face>	
+		<face>
+			<title><![CDATA[Laptops]]></title>
+			<eyes>4</eyes>
+			<mouth>4</mouth>
+			<xpos>1550</xpos>
+			<ypos>9250000</ypos>
+			<xfuture>2085</xfuture>
+			<yfuture>10300000</yfuture>
+			<colour>orange</colour>
+			<shape>circle</shape>
+	
+		</face>	
+		<face>
+			<title><![CDATA[Gameboys]]></title>
+			<eyes>2</eyes>
+			<mouth>5</mouth>
+			<xpos>2100</xpos>
+			<ypos>5500000</ypos>
+			<xfuture>670</xfuture>
+			<yfuture>7750000</yfuture>
+			<colour>cyan</colour>
+			<shape>triangle</shape>
+		
+		</face>	
+		<face>
+			<title><![CDATA[BlueRay]]></title>
+			<eyes>4</eyes>
+			<mouth>1</mouth>
+			<xpos>740</xpos>
+			<ypos>6000000</ypos>
+			<xfuture>1120</xfuture>
+			<yfuture>9350000</yfuture>			
+			<colour>yellow</colour>
+			<shape>square</shape>
+			
+		</face>
+<face>
+			<title><![CDATA[Mobile Phones]]></title>
+			<eyes>1</eyes>
+			<mouth>3</mouth>
+			<xpos>2600</xpos>
+			<ypos>2900000</ypos>
+			<xfuture>2840</xfuture>
+			<yfuture>10100000</yfuture>
+			<colour>magenta</colour>
+			<shape>lozenge</shape>
+		
+		</face>	
+	
+	</faces>
+</faceschart>
