@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ExamplesMenu from './ExamplesMenu';
+import Routes from '../routes/Routes';
+import RenderRoutes from '../routes/RenderRoutes';
 
-const Examples = ({children}) =>
-  <div className="examples">
+const Examples = ({ routes }) => (
+  <section>
     <ExamplesMenu />
-    {children}
-  </div>;
+    <RenderRoutes routes={routes}/>
+  </section>
+);
 
 Examples.propTypes = {
-  children: PropTypes.node
+  routes: PropTypes.array
 };
 
 export default Examples;

@@ -1,0 +1,23 @@
+/*--- Typography ---*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400,700|IBM+Plex+Sans:400,700');
+
+/* Headings */
+h1, h2 {
+  font-family: $headingFont;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: normal;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,15 @@
+/*--- Graph ---*/
+
+/* Axis */
+.x-axis,
+.y-axis {
+  path, line {
+    fill: none;
+    stroke: #888;
+    shape-rendering: crispEdges;
+  }
+
+  text {
+    font-size: 10px;
+  }
+}

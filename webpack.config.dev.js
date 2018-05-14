@@ -28,7 +28,8 @@ export default {
     loaders: [
       {test: /\.js$/,
         include: path.join(__dirname, 'src'),
-        loaders: ['babel-loader']},
+        loaders: ['babel-loader']
+      },
       {test: /(\.(s*)css)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -36,13 +37,28 @@ export default {
         })
       },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'file'},
+        loader: 'file'
+      },
       {test: /\.(woff|woff2)$/,
-        loader: 'url?prefix=font/&limit=5000'},
+        loader: 'url?prefix=font/&limit=5000'
+      },
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=application/octet-stream'},
+        loader: 'url?limit=10000&mimetype=application/octet-stream'
+      },
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=image/svg+xml'}
+        loader: 'url?limit=10000&mimetype=image/svg+xml'
+      },
+      {test: /\.(jpg|png)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              publicPath: '/'
+            }
+          }
+        ]
+      }
     ]
   }
 };

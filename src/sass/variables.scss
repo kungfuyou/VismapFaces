@@ -1,0 +1,37 @@
+/*--- Variables ---*/
+
+  $pageBackground: #266726;
+
+  $primaryFont: 'IBM Plex Sans Condensed', sans-serif;
+  $headingFont: 'IBM Plex Sans', sans-serif;
+
+/* Colors */
+  $white: #fff;
+  $grey: #8e8e8e;
+  $lightGrey: #c3c3c3;
+  $lightBlue: #5fc1e0;
+
+/* Emotive */
+  $emotive1: #CF322E;
+  $emotive2: #F2652F;
+  $emotive3: #CCAC2B;
+  $emotive4: #7DC228;
+  $emotive5: #28B52B;
+
+/* Breakpoints */
+  $mobileBreakpoint            : 320px;
+  $iphoneBreakpoint            : 414px;
+  $mobileLandscapeBreakpoint    : 640px;
+  $tabletBreakpoint            : 768px;
+  $computerBreakpoint          : 992px;
+  $largeMonitorBreakpoint      : 1200px;
+  $widescreenMonitorBreakpoint : 1920px;
+
+  $largestMobileScreen : ($tabletBreakpoint - 1px);
+  $largestTabletScreen : ($computerBreakpoint - 1px);
+  $largestSmallMonitor : ($largeMonitorBreakpoint - 1px);
+  $largestLargeMonitor : ($widescreenMonitorBreakpoint - 1px);
+
+  /* Forms */
+  $borderColor: $lightGrey;
+  $borderFocusColor: $lightBlue;

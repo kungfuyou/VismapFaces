@@ -223,14 +223,15 @@ class Filter2 extends React.Component {
 
   render() {
     return (
-      <Examples>
+      <div>
+        <h1>Filter 2</h1>
         <Select id="date-option"
           options={this.state.options}
           selected={this.state.selected}
           changeCallback={this.changeCallback}
         />
         <div ref="canvas"></div>
-      </Examples>
+      </div>
     );
   }
 }

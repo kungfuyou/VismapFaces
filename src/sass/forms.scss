@@ -1,0 +1,122 @@
+form {
+  .field {
+    margin-bottom: 1rem;
+
+    > label {
+      display: block;
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  input[type=text] {
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Sans';
+    padding: 0.5rem;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $borderColor;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $borderFocusColor;
+    }
+  }
+
+  /* Focus Fields */
+  input[type=text].focusField {
+    border-color: transparent transparent $borderColor;
+
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $borderFocusColor;
+      box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.2) inset;
+    }
+  }
+
+  /* Radio Buttons */
+  .radio-group {
+    display: flex;
+    position: relative;
+    border-radius: 0.4rem;
+    overflow: hidden;
+
+
+    .radio {
+      padding: 0.25rem;
+      text-align: center;
+      flex: 0 1 100%;
+
+      label {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label > span {
+        margin-bottom: 0.25rem;
+        color: $white;
+      }
+
+      input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+      }
+
+      input[type="radio"]:checked {
+        ~ .radio-proxy {
+          background: $lightBlue;
+        }
+
+        ~ .radio-proxy:after {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 10px;
+          background: white;
+          position: absolute;
+          border-radius: 100%;
+          left: calc(50% - 5px);
+          top: calc(50% - 5px);
+        }
+      }
+
+      .radio-proxy {
+        position: relative;
+        display: block;
+        height: 18px;
+        width: 18px;
+        background-color: $lightGrey;
+        border-radius: 50%;
+      }
+
+      &:hover .radio-proxy {
+        background-color: $grey;
+      }
+    }
+  }
+
+  /* Colors */
+  .radio {
+    &.emotive1 {
+      background: $emotive1;
+    }
+    &.emotive2 {
+      background: $emotive2;
+    }
+    &.emotive3 {
+      background: $emotive3;
+    }
+    &.emotive4 {
+      background: $emotive4;
+    }
+    &.emotive5 {
+      background: $emotive5;
+    }
+  }
+}

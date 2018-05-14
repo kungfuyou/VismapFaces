@@ -41,10 +41,10 @@ class SimpleBar extends React.Component {
   render() {
 
     return (
-      <Examples>
+      <div>
         <h1>SimpleBar</h1>
         <div ref="canvas"></div>
-      </Examples>
+      </div>
     );
   }
 }

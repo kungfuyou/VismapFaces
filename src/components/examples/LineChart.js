@@ -73,10 +73,10 @@ class LineChart extends React.Component {
   render() {
 
     return (
-      <Examples>
+      <div>
         <h1>Line Chart</h1>
         <div ref="canvas"></div>
-      </Examples>
+      </div>
     );
   }
 }

@@ -64,9 +64,10 @@ class ScatterPlot extends React.Component {
 
   render() {
     return (
-      <Examples>
+      <div>
+        <h1>Web Api</h1>
         <div ref="canvas"></div>
-      </Examples>
+      </div>
     );
   }
 }

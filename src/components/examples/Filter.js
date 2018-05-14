@@ -129,7 +129,7 @@ class Filter extends React.Component {
 
   render() {
     return (
-      <Examples>
+      <div>
         <h1>Filter</h1>
         <Select id="select-labels"
           options={this.state.options}
@@ -137,7 +137,7 @@ class Filter extends React.Component {
           changeCallback={this.changeCallback}
         />
         <div ref="canvas"></div>
-      </Examples>
+      </div>
     );
   }
 }

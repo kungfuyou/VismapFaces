@@ -15,7 +15,6 @@ const ExamplesMenu = () =>
     <NavLink to="/examples/axis" activeClassName="active">Axis</NavLink>
     <NavLink to="/examples/filter" activeClassName="active">Filter</NavLink>
     <NavLink to="/examples/filter2" activeClassName="active">Filter2</NavLink>
-
   </nav>;
 
   export default ExamplesMenu;

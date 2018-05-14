@@ -1,0 +1,42 @@
+/*--- Menus ---*/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  a {
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  a.active {
+    font-weight: 700;
+  }
+}
+
+nav.main {
+  background: rgba(0,0,0,0.2);
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a.active {
+    background: rgba(0,0,0,0.1);
+    font-weight: 400;
+  }
+
+  img {
+    margin: 1rem;
+  }
+
+  .logo {
+    img {
+      width: 110px;
+    }
+  }
+}

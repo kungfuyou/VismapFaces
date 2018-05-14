@@ -1,0 +1,86 @@
+/*--- Grids ---*/
+
+.grid.dashBoard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "heading"
+    "productmarket"
+    "valueanalysis"
+    "salesstrategy"
+    "valueposition"
+    "competitiveadvantage"
+    "swot";
+
+
+  @media only screen and (min-width: $tabletBreakpoint) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "heading heading"
+      "productmarket productmarket"
+      "valueanalysis salesstrategy"
+      "valueposition competitiveadvantage"
+      "swot swot";
+  }
+
+  @media only screen and (min-width: $computerBreakpoint) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "heading heading heading"
+      "productmarket productmarket productmarket"
+      "valueanalysis  valueanalysis salesstrategy"
+      "valueposition competitiveadvantage swot";
+  }
+
+
+  @media only screen and (min-width: $largeMonitorBreakpoint) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "heading heading heading"
+      "productmarket productmarket valueanalysis"
+      "salesstrategy valueposition competitiveadvantage"
+      "salesstrategy swot competitiveadvantage";
+  }
+
+  h1 {
+    grid-area: heading;
+  }
+
+  /* Articles */
+  article {
+    display: flex;
+    flex-direction: column;
+
+    .segment {
+      flex: 1 0 auto;
+    }
+  }
+  .product-market {
+    grid-area: productmarket;
+  }
+
+  .value-analysis {
+    grid-area: valueanalysis;
+  }
+
+  .sales-strategy {
+    grid-area: salesstrategy;
+
+    @media only screen and (min-width: $largeMonitorBreakpoint) {
+
+    }
+  }
+
+  .value-position {
+    grid-area: valueposition;
+  }
+
+  .competitive-advantage {
+    grid-area: competitiveadvantage;
+  }
+
+  .swot {
+    grid-area: swot;
+  }
+}
