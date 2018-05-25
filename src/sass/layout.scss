@@ -4,13 +4,17 @@ html {
 }
 
 body {
-  font-family: $primaryFont;
   background: $pageBackground;
   color: #fff;
+  font-family: $primaryFont;
   font-size: 1.4rem;
   margin: 0;
 }
 
 section {
   padding: 1rem;
+}
+
+.page {
+  position: relative;
 }

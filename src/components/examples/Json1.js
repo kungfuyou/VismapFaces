@@ -66,7 +66,6 @@ class ScatterPlot extends React.Component {
       if (error) {
         console.log('error', error);
       } else {
-        console.log('data', data);
         ds=data;
       }
 

@@ -7,6 +7,7 @@ import SalesStrategy from './salesstrategy';
 import ValuePosition from './valueposition';
 import CompetitiveAdvantage from './competitiveadvantage';
 import Swot from './swot';
+import LoadingOverlay from '../ui/LoadingOverlay';
 
 class DashBoard extends React.Component {
   constructor (props) {

@@ -16,17 +16,18 @@
   "dependencies": {
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
+    "cross-fetch": "^2.2.0",
     "d3": "^4.13.0",
     "d3-selection-multi": "^1.0.1",
     "jquery": "2.2.3",
     "react": "^16.0.0",
     "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
-    "redux-thunk": "2.0.1",
+    "redux-thunk": "^2.0.1",
     "toastr": "2.1.2"
   },
   "devDependencies": {

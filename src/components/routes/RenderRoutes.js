@@ -4,7 +4,7 @@ import { Switch } from 'react-router-dom';
 import RouteWithSubroutes from './RouteWithSubroutes';
 
 const RenderRoutes = ({routes}) => {
-  return <Switch>{routes.map((route, i) => <RouteWithSubroutes key={i} {...route} />)}</Switch>
+  return <Switch>{routes.map((route, i) =><RouteWithSubroutes key={i} {...route} />)}</Switch>
 };
 
 RenderRoutes.propTypes = {

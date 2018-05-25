@@ -1,13 +1,13 @@
 /* Root Reducer */
 import {combineReducers} from 'redux';
-import facesReducer from './facesReducer';
-import graphReducer from './graphReducer';
-import keysReducer from './keysReducer';
+import formsReducer from './formsReducer';
+import fieldsReducer from './fieldsReducer';
+import appAjaxCalls from './ajaxStatusReducer';
 
 const allReducers = {
-  graph: graphReducer,
-  keys: keysReducer,
-  faces: facesReducer
+  forms: formsReducer,
+  fields: fieldsReducer,
+  ajaxCallsInProgress: appAjaxCalls
 };
 
 const rootReducer = combineReducers(allReducers);

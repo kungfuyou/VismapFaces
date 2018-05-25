@@ -1,0 +1,26 @@
+/* Loading Overlay */
+.loading {
+  align-items: center;
+  background: rgba(31, 82, 32, 0.9);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.8rem;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  span {
+    align-items: center;
+    display: flex;
+  }
+
+  img {
+    height: 25px;
+    margin: 0.5rem 1rem;
+    width: auto;
+  }
+}

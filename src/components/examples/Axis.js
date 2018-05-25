@@ -28,15 +28,12 @@ class ScatterPlot extends React.Component {
       const day = strDate.substr(6,2);
 
       return new Date(year, month, day);
-    }
+    };
 
     const buildLine = (ds) => {
 
       const minDate = getDate(ds.monthlySales[0]['month']);
       const maxDate = getDate(ds.monthlySales[ds.monthlySales.length - 1]['month']);
-
-      console.log("min:" , minDate);
-      console.log("max:" , maxDate);
 
       const xScale = d3.scaleTime()
         .domain([
@@ -103,9 +100,7 @@ class ScatterPlot extends React.Component {
       if (error) {
         console.log('error', error);
       } else {
-        console.log(data);
-         ds = JSON.parse(window.atob(data.content));
-        console.log(ds);
+        ds = JSON.parse(window.atob(data.content));
       }
 
       ds.contents.forEach((ds) => {

@@ -1,11 +1,11 @@
 import React from 'react';
 import render from 'react-dom';
-import Information from './Information';
+import ProductInformation from './ProductInformation';
 
 const ProductMarket = () => {
   return(
     <div className="segment">
-      <Information />
+      <ProductInformation id='productInformation'/>
     </div>
   );
 };

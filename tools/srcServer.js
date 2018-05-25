@@ -10,6 +10,8 @@ const port = 3002;
 const app = express();
 const compiler = webpack(config);
 
+require('./routes')(app,{});
+
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath

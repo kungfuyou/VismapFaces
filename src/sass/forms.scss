@@ -5,6 +5,7 @@ form {
     > label {
       display: block;
       margin: 0 0 0.5rem;
+      color: grey;
     }
   }
 
@@ -40,16 +41,16 @@ form {
 
   /* Radio Buttons */
   .radio-group {
-    display: flex;
-    position: relative;
     border-radius: 0.4rem;
+    display: flex;
     overflow: hidden;
+    position: relative;
 
 
     .radio {
+      flex: 0 1 100%;
       padding: 0.25rem;
       text-align: center;
-      flex: 0 1 100%;
 
       label {
         font-size: 1.2rem;
@@ -64,8 +65,8 @@ form {
       }
 
       input[type="radio"] {
-        position: absolute;
         opacity: 0;
+        position: absolute;
       }
 
       input[type="radio"]:checked {
@@ -75,28 +76,28 @@ form {
 
         ~ .radio-proxy:after {
           content: '';
-          display: block;
-          width: 10px;
-          height: 10px;
           background: white;
-          position: absolute;
           border-radius: 100%;
+          display: block;
+          height: 10px;
           left: calc(50% - 5px);
+          position: absolute;
           top: calc(50% - 5px);
+          width: 10px;
         }
       }
 
       .radio-proxy {
-        position: relative;
+        background-color: $transparentBlack;
+        border-radius: 50%;
         display: block;
         height: 18px;
+        position: relative;
         width: 18px;
-        background-color: $lightGrey;
-        border-radius: 50%;
       }
 
       &:hover .radio-proxy {
-        background-color: $grey;
+        background-color: $strongTransparentBlack;
       }
     }
   }

@@ -45,10 +45,7 @@ export default {
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url?limit=10000&mimetype=application/octet-stream'
       },
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url?limit=10000&mimetype=image/svg+xml'
-      },
-      {test: /\.(jpg|png)$/,
+      {test: /\.(jpg|png|svg)$/,
         use: [
           {
             loader: 'file-loader',

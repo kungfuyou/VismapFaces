@@ -6,10 +6,10 @@ nav {
   text-transform: uppercase;
 
   a {
-    padding: 1.2rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1.2rem 1rem;
   }
 
   a.active {
@@ -19,6 +19,8 @@ nav {
 
 nav.main {
   background: rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
 
   a {
     color: white;

@@ -99,6 +99,14 @@ class Filter extends React.Component {
         });
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    this.svg.selectAll("text")
+      .data(this.monthlySales)
+      .text((d) => {
+        return this.showMinMax(this.monthlySales, 'sales', d.sales, nextState.selected);
+      });
+  }
+
   showMinMax(ds, col, val, type) {
     const max = d3.max(ds, function(d){
       return d[col];
@@ -113,14 +121,6 @@ class Filter extends React.Component {
     } else if (type == 'all') {
       return val;
     }
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    this.svg.selectAll("text")
-      .data(this.monthlySales)
-      .text((d) => {
-        return this.showMinMax(this.monthlySales, 'sales', d.sales, nextState.selected);
-      });
   }
 
   changeCallback(e) {
