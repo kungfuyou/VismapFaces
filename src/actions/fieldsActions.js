@@ -10,7 +10,6 @@ const getFieldsKey = (fields) => {
 };
 
 const getFieldsValues = (fields) => {
-  console.log(fields);
   const values = Object.values(fields).map(function(curr){
     return Object.entries(curr).map(function(curr){
       return curr[1];

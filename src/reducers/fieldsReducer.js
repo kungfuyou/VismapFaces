@@ -7,7 +7,7 @@ export default function fieldsReducer (state={}, action) {
       return action.fields;
 
     case C.SAVE_FIELDS_SUCCESS: {
-      return action.fields;
+      return {...state, ...action.fields};
     }
 
     default: return state;

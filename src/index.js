@@ -15,14 +15,10 @@ import './sass/app.scss';
 const store = configureStore(initialState);
 
 let unsubscribe = store.subscribe(() =>
-  console.log('unsubscribe')
+  console.log('unsubscribed:' , store.getState())
 );
 
-store.dispatch(loadFields())
-.then(() => {
-  console.log(store.getState())
-  //unsubscribe();
-});
+store.dispatch(loadFields());
 
 render((
     <Router>

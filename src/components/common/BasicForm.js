@@ -13,7 +13,7 @@ const BasicFormHOC = (Component) => {
   class BasicForm extends React.Component {
     constructor(props) {
       super(props);
-      console.log(this.props.fields);
+
       this.state = {
         fields: Object.assign({}, this.props.fields),
         saving: false
@@ -85,7 +85,7 @@ const BasicFormHOC = (Component) => {
       obj[item.id] = {...item};
       return obj;
     }, {});
-    
+
     return fields;
   }
 
