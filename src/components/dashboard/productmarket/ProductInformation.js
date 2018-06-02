@@ -7,13 +7,15 @@ import * as FieldsActions from '../../../actions/fieldsActions.js';
 import * as FormActions from '../../../actions/formsActions.js';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
+import toastr from 'toastr';
 
 class ProductInformation extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      fields: Object.assign({}, this.props.fields)
+      fields: Object.assign({}, this.props.fields),
+      saving: false
     };
 
     this.radioArray = [
@@ -82,18 +84,28 @@ class ProductInformation extends React.Component {
     const fields = {
       [this.props.id] : this.state.fields
     };
-  
-    this.props.actions.saveFields(fields);
+
+    this.setState({saving: true});
+    this.props.actions.saveFields(fields)
+    .then(() => {
+      this.setState({saving: false});
+      toastr.success('form saved successfully!');
+    })
+    .catch((error) => {
+      toastr.error(error);
+    });
   }
 
   render() {
     return (
       <form className="product-market-information">
+
         <TextInput
           name="product"
           label="Product/Service"
           className="focusField"
           placeholder="Enter product or service"
+          disabled={this.state.saving}
           value={this.state.fields.product}
           onChange={this.updateFieldState}
         />
@@ -103,6 +115,7 @@ class ProductInformation extends React.Component {
           label="Market Sector"
           className="focusField"
           placeholder="Enter market sector"
+          disabled={this.state.saving}
           value={this.state.fields.sector}
           onChange={this.updateFieldState}
         />
@@ -111,6 +124,7 @@ class ProductInformation extends React.Component {
           label="Market Clarity"
           radioArray={this.radioArray}
           checked={this.setChecked(this.state.fields.clarity)}
+          disabled={this.state.saving}
           onChange={this.updateFieldState}
         />
 
@@ -119,6 +133,7 @@ class ProductInformation extends React.Component {
           label="Current Sales (£)"
           className="focusField"
           placeholder="Enter current sales"
+          disabled={this.state.saving}
           value={this.state.fields.currentSales}
           onChange={this.updateFieldState}
         />
@@ -128,6 +143,7 @@ class ProductInformation extends React.Component {
           label="Current Margin (%)"
           className="focusField"
           placeholder="Enter current margin"
+          disabled={this.state.saving}
           value={this.state.fields.currentMargin}
           onChange={this.updateFieldState}
         />
@@ -137,6 +153,7 @@ class ProductInformation extends React.Component {
           label="Target Sales (£)"
           className="focusField"
           placeholder="Enter target sales"
+          disabled={this.state.saving}
           value={this.state.fields.targetSales}
           onChange={this.updateFieldState}
         />
@@ -146,13 +163,15 @@ class ProductInformation extends React.Component {
           label="Target Margin (%)"
           className="focusField"
           placeholder="Enter target margin"
+          disabled={this.state.saving}
           value={this.state.fields.targetMargin}
           onChange={this.updateFieldState}
         />
 
         <input
           type="submit"
-          value="Submit"
+          value={this.state.saving ? "saving" : "save"}
+          disabled={this.state.saving}
           onClick={this.saveForm}
           />
       </form>
@@ -171,7 +190,6 @@ function reduceFieldsFromState(fieldsArray) {
 }
 
 function mapStateToProps(state, ownProps) {
-  console.log('state', state);
   const fields = reduceFieldsFromState(state.fields[ownProps.id]);
 
   return {

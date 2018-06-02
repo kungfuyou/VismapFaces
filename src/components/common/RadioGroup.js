@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import RadioInput from './RadioInput';
 
-const RadioGroup = ({label, radioArray, onChange, checked }) => {
+const RadioGroup = ({label, radioArray, onChange, checked, disabled }) => {
   return (
     <div className="field">
       <label>{label}</label>
@@ -12,6 +12,7 @@ const RadioGroup = ({label, radioArray, onChange, checked }) => {
             key={index}
             {...item}
             checked={checked(item.value)}
+            disabled={disabled}
             onChange={onChange}
           />);
 
@@ -25,7 +26,8 @@ RadioGroup.propTypes = {
   label: PropTypes.string,
   radioArray: PropTypes.array.isRequired,
   checked: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
 };
 
 export default RadioGroup;

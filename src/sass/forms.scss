@@ -1,35 +1,41 @@
 form {
   .field {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     > label {
       display: block;
       margin: 0 0 0.5rem;
-      color: grey;
+      color: $labelColor;
+      text-transform: uppercase;
+      font-size: 1.2rem;
     }
   }
 
   input[type=text] {
     font-size: 1.5rem;
     font-family: 'IBM Plex Sans';
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid $borderColor;
     border-radius: 0.25rem;
     margin-bottom: 1rem;
+    color: $green;
 
     &:focus {
       outline: none;
       border: 1px solid $borderFocusColor;
     }
+
+    &:disabled {
+      color: $lightGrey;
+    }
   }
 
   /* Focus Fields */
   input[type=text].focusField {
-    border-color: transparent transparent $borderColor;
-
+    border-color: transparent;
     transition: border-color 0.2s;
 
     &:focus {
@@ -49,7 +55,7 @@ form {
 
     .radio {
       flex: 0 1 100%;
-      padding: 0.25rem;
+      padding: 0.5rem;
       text-align: center;
 
       label {

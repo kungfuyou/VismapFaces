@@ -1,0 +1,12 @@
+input[type="submit"] {
+  background: #888888;
+  border-radius: 0.2rem;
+  border: none;
+  color: white;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+
+  &:disabled {
+    background: #c1c1c1;
+  }
+}

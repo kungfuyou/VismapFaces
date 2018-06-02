@@ -1,6 +1,6 @@
 /*--- Variables ---*/
 
-  $pageBackground: #266726;
+
 
   $primaryFont: 'IBM Plex Sans Condensed', sans-serif;
   $headingFont: 'IBM Plex Sans', sans-serif;
@@ -10,9 +10,13 @@
   $grey: #8e8e8e;
   $lightGrey: #c3c3c3;
   $lightBlue: #5fc1e0;
+  $green: #266726;
 
   $transparentBlack: rgba(0,0,0,0.3);
   $strongTransparentBlack: rgba(0,0,0,0.4);
+
+/* Page */
+  $pageBackground: $green;
 
 /* Emotive */
   $emotive1: #CF322E;
@@ -20,6 +24,9 @@
   $emotive3: #CCAC2B;
   $emotive4: #7DC228;
   $emotive5: #28B52B;
+
+/* Text Color */
+  $lightTextColor: #6d6d6d;
 
 /* Breakpoints */
   $mobileBreakpoint            : 320px;
@@ -38,3 +45,4 @@
   /* Forms */
   $borderColor: $lightGrey;
   $borderFocusColor: $lightBlue;
+  $labelColor: $lightTextColor;

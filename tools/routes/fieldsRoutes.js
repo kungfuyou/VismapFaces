@@ -10,7 +10,7 @@ export default function fieldsRoutes(app, db) {
 
   app.put('/fields', (req, res) => {
     setTimeout((req) => {
-      res.send({success: 'great'});
+      res.send({message: 'fields saved succesfully'});
     }, delay);
   });
 }
