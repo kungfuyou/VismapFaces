@@ -9,70 +9,78 @@ const ProductInformationForm = ({disabled, fields, setChecked, onChange, onSave}
   return(
     <form className="product-market-information">
       <TextInput
-        name="product"
-        label="Product/Service"
+        id={fields.product.id}
+        name={fields.product.name}
+        label={fields.product.label}
         className="focusField"
-        placeholder="Enter product or service"
+        placeholder={fields.product.placeholder}
         disabled={disabled}
-        value={fields.product}
+        value={fields.product.value}
         onChange={onChange}
       />
 
       <TextInput
-        name="sector"
-        label="Market Sector"
+        id={fields.sector.id}
+        name={fields.sector.name}
+        label={fields.sector.label}
         className="focusField"
-        placeholder="Enter market sector"
+        placeholder={fields.sector.placeholder}
         disabled={disabled}
-        value={fields.sector}
+        value={fields.sector.value}
         onChange={onChange}
       />
 
       <RadioGroup
-        label="Market Clarity"
-        radioArray={[]}
-        checked={setChecked}
+        id={fields.clarity.id}
+        name={fields.clarity.name}
+        label={fields.clarity.label}
+        radioArray={fields.clarity.elements}
+        checked={setChecked(fields.clarity.value)}
         disabled={disabled}
         onChange={onChange}
       />
 
       <TextInput
-        name="currentSales"
-        label="Current Sales (£)"
+        id={fields.currentSales.id}
+        name={fields.currentSales.name}
+        label={fields.currentSales.label}
         className="focusField"
-        placeholder="Enter current sales"
+        placeholder={fields.currentSales.placeholder}
         disabled={disabled}
-        value={fields.currentSales}
+        value={fields.currentSales.value}
         onChange={onChange}
       />
 
       <TextInput
-        name="currentMargin"
-        label="Current Margin (%)"
+        id={fields.currentMargin.id}
+        name={fields.currentMargin.name}
+        label={fields.currentMargin.label}
         className="focusField"
-        placeholder="Enter current margin"
+        placeholder={fields.currentMargin.placeholder}
         disabled={disabled}
-        value={fields.currentMargin}
+        value={fields.currentMargin.value}
         onChange={onChange}
       />
 
       <TextInput
-        name="targetSales"
-        label="Target Sales (£)"
+        id={fields.targetSales.id}
+        name={fields.targetSales.name}
+        label={fields.targetSales.label}
         className="focusField"
-        placeholder="Enter target sales"
+        placeholder={fields.targetSales.placeholder}
         disabled={disabled}
-        value={fields.targetSales}
+        value={fields.targetSales.value}
         onChange={onChange}
       />
 
       <TextInput
-        name="targetMargin"
-        label="Target Margin (%)"
+        id={fields.targetMargin.id}
+        name={fields.targetMargin.name}
+        label={fields.targetMargin.label}
         className="focusField"
-        placeholder="Enter target margin"
+        placeholder={fields.targetMargin.placeholder}
         disabled={disabled}
-        value={fields.targetMargin}
+        value={fields.targetMargin.value}
         onChange={onChange}
       />
 
@@ -81,7 +89,7 @@ const ProductInformationForm = ({disabled, fields, setChecked, onChange, onSave}
         value="save"
         disabled={disabled}
         onClick={onSave}
-        />
+      />
     </form>
   );
 };

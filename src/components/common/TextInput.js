@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextInput = ({name, label, className, placeholder, disabled, value, onChange}) => {
+const TextInput = ({id, name, label, className, placeholder, disabled, value, onChange}) => {
   return (
     <div className="field">
       <label htmlFor={name}>{label}</label>
       <input
+        id={id}
         type="text"
         name={name}
         className={className}
@@ -18,6 +19,7 @@ const TextInput = ({name, label, className, placeholder, disabled, value, onChan
 };
 
 TextInput.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   className: PropTypes.string,

@@ -15,7 +15,7 @@ import './sass/app.scss';
 const store = configureStore(initialState);
 
 let unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
+  console.log('unsubscribe')
 );
 
 store.dispatch(loadFields())

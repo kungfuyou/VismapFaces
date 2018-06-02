@@ -5,20 +5,23 @@ const data = {
         id: 'product',
         value: 'my product',
         type: 'text',
-        elements: 'product',
-        label: 'Product/Service'
+        name: 'product',
+        label: 'Product/Service',
+        placeholder: 'Enter product or service'
       },
       {
         id: 'sector',
         value: 'my sector',
         type: 'text',
-        elements: 'sector',
-        label: 'Market Sector'
+        name: 'sector',
+        label: 'Market Sector',
+        placeholder: 'Enter market sector'
       },
       {
         id: 'clarity',
         value: 'good',
         type: 'radio',
+        name: 'clarity',
         elements: [
           {
             className: "emotive1",
@@ -62,29 +65,33 @@ const data = {
         id: 'currentSales',
         value: '0',
         type: 'text',
-        elements: 'currentSales',
-        label: 'Current Sales (£)'
+        name: 'currentSales',
+        label: 'Current Sales (£)',
+        placeholder: 'Enter current sales'
       },
       {
         id: 'currentMargin',
         value: '0',
         type: 'text',
-        elements: 'currentMargin',
-        label: 'Current Margin (£)'
+        name: 'currentMargin',
+        label: 'Current Margin (£)',
+        placeholder: 'Enter current margin'
       },
       {
         id: 'targetSales',
         value: '1',
         type: 'text',
-        elements: 'targetSales',
-        label: 'Target Sales (£)'
+        name: 'targetSales',
+        label: 'Target Sales (£)',
+        placeholder: 'Enter target sales'
       },
       {
         id: 'targetMargin',
         value: '1',
         type: 'text',
-        elements: 'targetMargin',
-        label: 'Target Margin (£)'
+        name: 'targetMargin',
+        label: 'Target Margin (£)',
+        placeholder: 'Enter target margin'
       }
     ],
     swot : [
