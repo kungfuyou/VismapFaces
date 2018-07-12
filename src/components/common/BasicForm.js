@@ -19,44 +19,6 @@ const BasicFormHOC = (Component) => {
         saving: false
       };
 
-      this.radioArray = [
-        {
-          className: "emotive1",
-          name: "clarity",
-          id: "poor",
-          value: "poor",
-          label: "Poor"
-        },
-        {
-          className: "emotive2",
-          name: "clarity",
-          id: "fair",
-          value: "fair",
-          label: "Fair"
-        },
-        {
-          className: "emotive3",
-          name: "clarity",
-          id: "average",
-          value: "average",
-          label: "Average"
-        },
-        {
-          className: "emotive4",
-          name: "clarity",
-          id: "good",
-          value: "good",
-          label: "Good"
-        },
-        {
-          className: "emotive5",
-          name: "clarity",
-          id: "excellent",
-          value: "excellent",
-          label: "Excellent"
-        }
-      ];
-
       this.updateFieldState = this.updateFieldState.bind(this);
       this.setChecked = this.setChecked.bind(this);
       this.saveForm = this.saveForm.bind(this);
@@ -69,8 +31,8 @@ const BasicFormHOC = (Component) => {
     updateFieldState(event) {
       const field = event.target.name;
       let fields = Object.assign({}, this.state.fields);
+      fields[field].value = event.target.value;
 
-      fields[field] = event.target.value;
       return this.setState({fields: fields});
     }
 
@@ -82,6 +44,7 @@ const BasicFormHOC = (Component) => {
 
     saveForm(event) {
       event.preventDefault();
+
       const fields = {
         [this.props.id] : this.state.fields
       };
@@ -118,10 +81,8 @@ const BasicFormHOC = (Component) => {
   };
 
   function reduceFieldsFromState(fieldsArray) {
-    console.log(fieldsArray);
-
     const fields = fieldsArray.reduce((obj, item) => {
-      obj[item.id] = item.value;
+      obj[item.id] = {...item};
       return obj;
     }, {});
 
