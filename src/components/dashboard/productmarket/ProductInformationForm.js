@@ -4,6 +4,7 @@ import render from 'react-dom';
 import TextInput from '../../common/TextInput';
 import RadioInput from '../../common/RadioInput';
 import RadioGroup from '../../common/RadioGroup';
+import Button from '../../common/Button';
 
 const ProductInformationForm = ({disabled, fields, setChecked, onChange, onSave}) => {
   return(
@@ -84,11 +85,12 @@ const ProductInformationForm = ({disabled, fields, setChecked, onChange, onSave}
         onChange={onChange}
       />
 
-      <input
+      <Button
         type="submit"
         value="save"
         disabled={disabled}
         onClick={onSave}
+        label="Save"
       />
     </form>
   );

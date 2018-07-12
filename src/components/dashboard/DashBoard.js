@@ -56,7 +56,6 @@ class DashBoard extends React.Component {
             header="SWOT">
             <Swot />
           </Article>
-
         </section>
     );
   }

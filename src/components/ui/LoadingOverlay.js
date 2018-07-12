@@ -5,7 +5,7 @@ import LoadingBars from '../../assets/loading-bars.svg';
 const LoadingOverlay = ({loading, message='loading'}) => {
   return (
     loading ?
-    <div className="loading">
+    <div className="loading dimmer">
       <span>
         {message}
         <img src={LoadingBars} />

@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import MainMenu from './MainMenu';
 import LoadingOverlay from './LoadingOverlay';
+import Messages from '../messages/MessagesContainer';
 
-const PageTemplate = ({children, loading}) => {
+const PageTemplate = ({children, loading, loggedIn=false}) => {
   return (
     <div className="page">
-      <MainMenu />
+      <MainMenu loggedIn={loggedIn}/>
+      <Messages />
       {loading ?
         <LoadingOverlay loading={loading} />
         :
@@ -16,8 +18,9 @@ const PageTemplate = ({children, loading}) => {
 };
 
 PageTemplate.propTypes = {
-  children: PropTypes.object,
-  loading: PropTypes.bool
+  children: PropTypes.array,
+  loading: PropTypes.bool,
+  loggedIn: PropTypes.bool
 };
 
 export default PageTemplate;
