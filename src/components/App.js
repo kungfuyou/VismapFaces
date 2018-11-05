@@ -24,7 +24,8 @@ class App extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    //console.log(nextProps.messages);
+
+    console.log('nextProps', nextProps);
   }
 
   render() {
@@ -51,7 +52,8 @@ function mapStateToProps(state, ownProps) {
 
 App.propTypes = {
   loading: PropTypes.bool,
-  loggedIn: PropTypes.bool
+  loggedIn: PropTypes.bool,
+  dispatch: PropTypes.func
 };
 
 export default withRouter(connect(mapStateToProps)(App));
